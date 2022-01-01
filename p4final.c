@@ -28,11 +28,11 @@ int find_status(camel Asis){
     {
         return 1;
     }
-    else if(Asis.height < Asis.length && Asis.height < Asis.radius)
+    else if(Asis.height < Asis.length)
     {
         return 2;
     }
-    else if(Asis.length < Asis.height && Asis.length < Asis.radius)
+    else if(Asis.length < Asis.radius)
     {
         return 3;
     }

@@ -23,7 +23,7 @@ float odd_average(int n, int a[n]){
     int sum=0,count;
     for (int i = 0; i < n; i++)
     {
-        if (a[i]%2 == 0)
+        if (a[i]%2 != 0)
         {
             sum += a[i];
             count++;
@@ -44,7 +44,7 @@ void output(int n, int a[n], int avg){
         printf("%d ",a[i]);
     }
     printf("\n and the average is %d \n",avg);
-    
+     
 }
 
 int main(){
@@ -53,7 +53,7 @@ int main(){
     scanf("%d",&n);
     int a[n];
     input(n,a);
-    int avg;
+    float avg;
     avg = odd_average(n,a);
     output(n,a,avg);
     return 0;

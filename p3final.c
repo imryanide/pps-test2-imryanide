@@ -34,11 +34,10 @@ camel input_camel(){
 }
 
 
-camel find_weight(camel Asis){
+void find_weight(camel *Asis){
     //weight = pi * stomach_raduius^3 * sqrt(height * length). 
+    Asis->weight = (PI * pow(Asis->radius,3) * sqrt(Asis->height*Asis->length));
 
-    Asis.weight = (PI * pow(Asis.radius,3) * sqrt(Asis.height*Asis.length));
-    return Asis;
 }
 
 
@@ -51,7 +50,7 @@ void output(camel Asis){
 int main(){
     camel Asis;
     Asis = input_camel();
-    Asis = find_weight(Asis);
+    find_weight(&Asis);
     output(Asis);
     return 0;
 }
